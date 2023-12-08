@@ -1,4 +1,4 @@
-name: OSS Review Toolkit
+name: build
 
 on:
   push:
@@ -18,3 +18,5 @@ jobs:
         with:
           image: gdi-ort-image:latest
           report-formats: CycloneDx,SpdxDocument,WebApp,PlainTextTemplate
+          allow-dynamic-versions: 'true'
+          fail-on: 'violations'
