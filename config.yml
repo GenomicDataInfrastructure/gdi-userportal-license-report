@@ -1,0 +1,9 @@
+ort:
+  packageCurationProviders:
+  - type: DefaultFile
+  - type: DefaultDir
+  - type: File
+    id: SomeCurationsFile
+    options:
+      path: '/home/ort/.ort/config/curations.yml'
+      mustExist: true

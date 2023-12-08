@@ -12,8 +12,11 @@ jobs:
         run: git config --global url.https://github.com/.insteadOf ssh://git@github.com/
       - name: Checkout project
         uses: actions/checkout@v3
-      - name: Build custom ORT image
-        run: docker build -t gdi-ort-image:latest .
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: "gdi-ort-image:latest"
       - uses: oss-review-toolkit/ort-ci-github-action@b6d71a83acba8619f16b30c008f212a7a572f8e8 #v1
         with:
           image: gdi-ort-image:latest
