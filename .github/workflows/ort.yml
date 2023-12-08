@@ -21,13 +21,13 @@ jobs:
       matrix:
         include:
           - repository: GenomicDataInfrastructure/gdi-userportal-frontend
-            sw-name: frontend
+            sw-name: gdi-userportal-frontend
           - repository: GenomicDataInfrastructure/gdi-userportal-apigateway
-            sw-name: apigateway
+            sw-name: gdi-userportal-apigateway
           - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-gdi-userportal
-            sw-name: ckanext-gdi-userportal
+            sw-name: gdi-userportal-ckanext-gdi-userportal
           - repository: GenomicDataInfrastructure/gdi-userportal-docs
-            sw-name: docs
+            sw-name: gdi-userportal-docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
