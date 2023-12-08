@@ -10,14 +10,22 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - repository: GenomicDataInfrastructure/gdi-userportal-frontend
-            sw-name: gdi-userportal-frontend
           - repository: GenomicDataInfrastructure/gdi-userportal-apigateway
             sw-name: gdi-userportal-apigateway
+          - repository: GenomicDataInfrastructure/gdi-userportal-ckan-docker
+            sw-name: gdi-userportal-ckan-docker
+          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-dcat
+            sw-name: gdi-userportal-ckanext-dcat
           - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-gdi-userportal
             sw-name: gdi-userportal-ckanext-gdi-userportal
+          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-harvest
+            sw-name: gdi-userportal-ckanext-harvest
+          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-scheming
+            sw-name: gdi-userportal-ckanext-scheming
           - repository: GenomicDataInfrastructure/gdi-userportal-docs
             sw-name: gdi-userportal-docs
+          - repository: GenomicDataInfrastructure/gdi-userportal-frontend
+            sw-name: gdi-userportal-frontend
     runs-on: ubuntu-latest
     steps:
       - name: Use HTTPS instead of SSH for Git cloning
