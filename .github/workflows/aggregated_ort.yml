@@ -14,7 +14,7 @@ jobs:
         run: git config --global url.https://github.com/.insteadOf ssh://git@github.com/
       - uses: actions/checkout@v3
         with:
-          submodules: 'true'
+          submodules: 'recursive'
       - uses: oss-review-toolkit/ort-ci-github-action@b6d71a83acba8619f16b30c008f212a7a572f8e8 #v1
         with:
           report-formats: CycloneDx,SpdxDocument,WebApp,PlainTextTemplate,Opossum
