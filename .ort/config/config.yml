@@ -3,7 +3,7 @@ ort:
   - type: DefaultFile
   - type: DefaultDir
   - type: File
-    id: SomeCurationsFile
+    id: gdi_curations
     options:
-      path: '/home/ort/.ort/config/curations.yml'
+      path: './curations.yml'
       mustExist: true
