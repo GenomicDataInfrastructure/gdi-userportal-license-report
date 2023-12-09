@@ -2,39 +2,20 @@ name: OSS Review Toolkit
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "aggregated-view" ]
 
 jobs:
   ort:
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - repository: GenomicDataInfrastructure/gdi-userportal-apigateway
-            sw-name: gdi-userportal-apigateway
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckan-docker
-            sw-name: gdi-userportal-ckan-docker
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-dcat
-            sw-name: gdi-userportal-ckanext-dcat
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-gdi-userportal
-            sw-name: gdi-userportal-ckanext-gdi-userportal
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-harvest
-            sw-name: gdi-userportal-ckanext-harvest
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-scheming
-            sw-name: gdi-userportal-ckanext-scheming
-          - repository: GenomicDataInfrastructure/gdi-userportal-docs
-            sw-name: gdi-userportal-docs
-          - repository: GenomicDataInfrastructure/gdi-userportal-frontend
-            sw-name: gdi-userportal-frontend
     runs-on: ubuntu-latest
     steps:
       - name: Use HTTPS instead of SSH for Git cloning
         run: git config --global url.https://github.com/.insteadOf ssh://git@github.com/
       - uses: actions/checkout@v3
         with:
-          repository: ${{ matrix.repository }}
+          submodules: 'true'
       - uses: oss-review-toolkit/ort-ci-github-action@b6d71a83acba8619f16b30c008f212a7a572f8e8 #v1
         with:
           report-formats: CycloneDx,SpdxDocument,WebApp,PlainTextTemplate,Opossum
-          sw-name: ${{ matrix.sw-name }}
           run: 'cache-dependencies,cache-scan-results,labels,analyzer,evaluator,advisor,reporter,upload-results'

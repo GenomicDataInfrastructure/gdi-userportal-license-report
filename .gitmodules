@@ -1,0 +1,6 @@
+[submodule "repos/gdi-userportal-ckanext-gdi-userportal"]
+	path = repos/gdi-userportal-ckanext-gdi-userportal
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-ckanext-gdi-userportal.git
+[submodule "repos/gdi-userportal-frontend"]
+	path = repos/gdi-userportal-frontend
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-frontend.git
