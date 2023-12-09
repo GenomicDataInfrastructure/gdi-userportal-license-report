@@ -4,3 +4,25 @@
 [submodule "repos/gdi-userportal-frontend"]
 	path = repos/gdi-userportal-frontend
 	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-frontend.git
+[submodule "repos/gdi-userportal-apigateway"]
+	path = repos/gdi-userportal-apigateway
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-apigateway.git
+[submodule "repos/gdi-userportal-ckan-docker"]
+	path = repos/gdi-userportal-ckan-docker
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-ckan-docker.git
+	branch = user-portal-main
+[submodule "repos/gdi-userportal-ckanext-dcat"]
+	path = repos/gdi-userportal-ckanext-dcat
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-ckanext-dcat.git
+	branch = user-portal-v1.5.1
+[submodule "repos/gdi-userportal-ckanext-harvest"]
+	path = repos/gdi-userportal-ckanext-harvest
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-ckanext-harvest.git
+	branch = user-portal-v1.5.6
+[submodule "repos/gdi-userportal-ckanext-scheming"]
+	path = repos/gdi-userportal-ckanext-scheming
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-ckanext-scheming.git
+	branch = user-portal-v3.0.0
+[submodule "repos/gdi-userportal-docs"]
+	path = repos/gdi-userportal-docs
+	url = git@github.com:GenomicDataInfrastructure/gdi-userportal-docs.git
