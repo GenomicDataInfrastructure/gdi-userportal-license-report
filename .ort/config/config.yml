@@ -1,9 +1,0 @@
-ort:
-  packageCurationProviders:
-  - type: DefaultFile
-  - type: DefaultDir
-  - type: File
-    id: gdi_curations
-    options:
-      path: './curations.yml'
-      mustExist: true
