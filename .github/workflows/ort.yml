@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: ${{ matrix.repository }}
-      - uses: oss-review-toolkit/ort-ci-github-action@b6d71a83acba8619f16b30c008f212a7a572f8e8 #v1
+      - uses: oss-review-toolkit/ort-ci-github-action@7f23c1f8d169dad430e41df223d3b8409c7a156e
         with:
           report-formats: CycloneDx,SpdxDocument,WebApp,PlainTextTemplate,Opossum
           sw-name: ${{ matrix.sw-name }}
