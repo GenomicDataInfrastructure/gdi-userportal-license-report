@@ -1,8 +1,6 @@
 name: Aggregated ORT
 
-on:
-  push:
-    branches: [ "main" ]
+on: workflow_dispatch
 
 jobs:
   ort:
