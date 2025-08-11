@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Use HTTPS instead of SSH for Git cloning
         run: git config --global url.https://github.com/.insteadOf ssh://git@github.com/
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ matrix.repository }}
       - uses: oss-review-toolkit/ort-ci-github-action@v1
